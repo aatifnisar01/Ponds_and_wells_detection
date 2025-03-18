@@ -82,6 +82,6 @@ Ensure the following Python packages are installed:
 - Tile scale of 1 results in 256x256 pixel images.
 - Merging buffer distance can be adjusted (0.0005) for sensitivity.
 
-
+## Overall Workflow
 ![ponds drawio (1)](https://github.com/user-attachments/assets/d1ef93b5-d9c1-4398-bdd8-daaffdb72c09)
 
