@@ -32,11 +32,11 @@ Ensure the following Python packages are installed:
 - requests for downloading map tiles
 
 ## Folder Structure
-├── Data/Zoom17/Masalia/           # Image tiles (downloaded here)
-├── Shapefiles/Masalia_mws.geojson # Input GeoJSON boundary
-├── CSV_Output/Masalia_Ponds.csv   # Output CSV with pond data
-├── Shapefile_Output/              # Output shapefile ZIPs
-├── Ponds_best.pt                  # Pre-trained YOLO model
+- Data/Zoom17/Masalia/           # Image tiles (downloaded here)
+- Shapefiles/Masalia_mws.geojson # Input GeoJSON boundary
+- CSV_Output/Masalia_Ponds.csv   # Output CSV with pond data
+- Shapefile_Output/              # Output shapefile ZIPs
+- Ponds_best.pt                  # Pre-trained YOLO model
 
 
 ## Workflow
