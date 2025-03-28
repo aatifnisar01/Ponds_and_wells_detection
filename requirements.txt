@@ -1,0 +1,10 @@
+opencv-python
+matplotlib
+numpy
+Pillow
+requests
+pandas
+geopandas
+shapely
+ultralytics
+scikit-image
