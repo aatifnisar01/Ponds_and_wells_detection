@@ -26,7 +26,7 @@ This project detects wells and ponds (dry and wet) within a specified geographic
 Ensure the following Python packages are installed:
         pip install numpy pandas geopandas opencv-python pillow requests matplotlib shapely ultralytics scikit-image
 
-- YOLOv8 model via Ultralytics
+- YOLOv11 model via Ultralytics
 - Shapely, GeoPandas for geospatial operations
 - OpenCV, scikit-image for image processing
 - requests for downloading map tiles
@@ -85,3 +85,31 @@ Ensure the following Python packages are installed:
 ## Overall Workflow
 ![ponds drawio (1)](https://github.com/user-attachments/assets/d1ef93b5-d9c1-4398-bdd8-daaffdb72c09)
 
+## Plantation Detection
+Similar to ponds and wells, this project includes a module for detecting plantations using zoom level 17 satellite tiles and a YOLOv11-based model. The pipeline involves:
+
+- Tile download from Google Maps at zoom 17
+
+- Object detection of plantation areas using a trained model (Plantations_best.pt)
+
+- Extraction of polygonal masks for detected plantations
+
+- Geospatial conversion and union of nearby polygons to capture continuous plantation patches
+
+- Final output includes CSV with detected polygons and a merged shapefile of plantation zones
+
+## CutMix Augmentation to Reduce False Positives
+
+To improve the model’s precision and reduce false positives, we used a CutMix-style augmentation strategy. Here's how it works:
+
+- Negative tiles (tiles without plantations) are taken as background
+
+- One valid annotated polygon from real plantation data is randomly selected and pasted onto a random location within a negative tile using its exact mask
+
+- Corresponding labels are accurately transformed to account for new positions
+
+- This process is repeated to create multiple synthetic samples
+
+- The final result is a curated dataset of single-plantation CutMix tiles, which enhances the model's ability to distinguish real plantations from noisy patterns in natural landscapes
+
+This augmentation strengthens the model's discrimination capability and lowers the occurrence of false positive detections in non-agricultural regions.
