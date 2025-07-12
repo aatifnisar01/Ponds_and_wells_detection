@@ -26,7 +26,7 @@ This project detects wells and ponds (dry and wet) within a specified geographic
 Ensure the following Python packages are installed:
         pip install numpy pandas geopandas opencv-python pillow requests matplotlib shapely ultralytics scikit-image
 
-- YOLOv11 model via Ultralytics
+- YOLOv8 model via Ultralytics
 - Shapely, GeoPandas for geospatial operations
 - OpenCV, scikit-image for image processing
 - requests for downloading map tiles
