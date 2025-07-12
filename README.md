@@ -113,3 +113,6 @@ To improve the model’s precision and reduce false positives, we used a CutMix-
 - The final result is a curated dataset of single-plantation CutMix tiles, which enhances the model's ability to distinguish real plantations from noisy patterns in natural landscapes
 
 This augmentation strengthens the model's discrimination capability and lowers the occurrence of false positive detections in non-agricultural regions.
+
+
+## Trained models can be found here: https://drive.google.com/drive/folders/1lLfJlf56FWq5bcjo5r1gIRkpCsySNGbr?usp=sharing
